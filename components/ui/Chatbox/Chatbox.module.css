@@ -11,6 +11,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 10px;
     z-index: 10;
   }
