@@ -7,8 +7,8 @@
     font-family: inherit;
     flex-shrink: 0;
     height: auto;
-    margin: 13px;
+    padding: 2px;
     right: 4vw;
-    top: 6vh;
-    width: fit-content;
+    top: 10vh;
+    width: fit-content; 
 }

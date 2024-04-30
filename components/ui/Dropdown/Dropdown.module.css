@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     left: 4vw;
-    bottom: 5.5vh; 
+    top: 3.25vh; 
     width: fit-content;
   }
   
@@ -35,19 +35,21 @@
   
   .dropdownMenu {
     display: block;
-    position: relative;
+    position: absolute;
     background-color: var(--color-gray-300);
-    width: 100%;
+    width: 200%;
+    height: fit-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.25);
     z-index: 100;
-    top: 100%
+    top: 100%;
+    border-radius: 6px;
   }
   
   .dropdownItem {
     color: black;
     padding: 8px 16px;
     text-decoration: none;
-    display: inside;
+    display: block;
     cursor: pointer;
   }
   

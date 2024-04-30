@@ -6,7 +6,7 @@ import styles from './TextLogo.module.css'; // Assuming you have specific styles
 const TextLogo: React.FC = () => {
   return (
     <div className={styles.belto}>
-          <Image src="/assets/belto.svg" alt="Beltotext" width={129} height={129} />
+          <Image src="/assets/belto.svg" alt="Beltotext" width={129} height={63} />
     </div>
   );
 };
