@@ -2,7 +2,8 @@
 cursor: pointer;
 border: none;
 padding: 1px;
-margin-left: 3px;
+margin-left: 1px;
+margin-right: 1px;
 background-color: transparent;
 }
 .Paperclip {

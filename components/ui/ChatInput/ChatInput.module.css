@@ -1,0 +1,12 @@
+.ChatInput {
+    border: 0;
+    outline: 0;
+    font-family: var(--font-sf-pro);
+    font-size: var(--font-size-base);
+    background-color: transparent;
+    position: absolute;
+    top: 17.5px;
+    left: 88px;
+    color: var(--color-gray-300);
+    text-align: left;
+}

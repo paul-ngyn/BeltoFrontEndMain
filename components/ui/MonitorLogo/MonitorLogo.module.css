@@ -3,6 +3,7 @@
   border: none;
   padding: 5px;
   background-color: transparent;
+  margin-left: 3px;
 }
 .Monitor {
   position: absolute;
