@@ -3,6 +3,8 @@ import Head from 'next/head';
 import './globals.css';
 import styles from './page.module.css';
 import ToolDropdown from '../../components/ui/ToolDropdown/ToolDropdown';
+import Monitor from '../../components/ui/MonitorLogo/MonitorLogo';
+import PaperClip from '../../components/ui/PaperClip/PaperClip';
 
 const Home: React.FC = () => {
   return (
@@ -20,21 +22,16 @@ const Home: React.FC = () => {
         </header>
 
         <ToolDropdown/>
-
         <div className="chatbox">
-          <button className="monitorarrowup">
-            <img className="monitor" alt="" src="/assets/arrow.svg" />
-          </button>
-          <button className="paperclip">
-            <img className="paperclip1" alt="" src="/assets/prompt-chat-field--alternativepapercliphorizontal@2x.png" />
-          </button>
+          <Monitor/>
+          <PaperClip/>
           <input
             className="type-your-prompt"
             placeholder="Type your prompt here"
             type="text"
           />
-          <button className="arrow">
-            <img className="arrowdown-icon" alt="" src="/assets/arrowdown.svg" />
+          <button className="Submit">
+            <img className="Submit-Button" alt="" src="/assets/SubmitButton.svg" />
           </button>
         </div>
 
