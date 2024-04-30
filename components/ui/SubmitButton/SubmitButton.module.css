@@ -1,0 +1,15 @@
+    .Submitbutton {
+    cursor: pointer;
+    border: none;
+    padding: 4px;
+    margin-left: 582px;
+    background-color: var(--color-dimgray);
+    border-radius: 6px;
+    display: flex;
+    object-fit: contain;
+    }
+    .Submit { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }

@@ -1,17 +1,12 @@
 .Paperclipbutton {
 cursor: pointer;
 border: none;
-padding: 1px;
-margin-left: 3px;
+padding: 0.5px;
+margin-right: 15px;
 background-color: transparent;
 }
 .Paperclip {
-background-color: transparent;
-left: 0px;
 position: fixed;
-top: 15px;
-width: 12px;
-height: 12px;
 overflow: hidden;
 display: flex;
 }
