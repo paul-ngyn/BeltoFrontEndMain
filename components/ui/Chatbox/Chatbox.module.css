@@ -1,9 +1,9 @@
 .Chatbox {
-    position: fixed;
-    top: 50vh;
+    position: relative;
+    top: 8vh;
     left: 32%;
     width: 36vw;
-    height: 4.55vh;
+    height: 5.55vh;
     border-radius: 14px;
     background-color: var(--color-gray-200);
     border: 2px solid var(--color-dimgray);
@@ -11,4 +11,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    padding: 8px;
+    z-index: 10;
   }

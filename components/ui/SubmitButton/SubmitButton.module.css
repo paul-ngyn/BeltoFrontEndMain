@@ -2,11 +2,12 @@
     cursor: pointer;
     border: none;
     padding: 4px;
-    margin-left: 582px;
+    margin-left: auto;
     background-color: var(--color-dimgray);
     border-radius: 6px;
     display: flex;
     object-fit: contain;
+    justify-content: center;
     }
     .Submit { 
         display: flex;
