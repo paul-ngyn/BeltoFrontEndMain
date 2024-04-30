@@ -1,11 +1,14 @@
 .Chatbox {
     position: fixed;
     top: 50vh;
-    left: 32vw;
+    left: 32%;
     width: 36vw;
+    height: 4.55vh;
     border-radius: 14px;
     background-color: var(--color-gray-200);
     border: 2px solid var(--color-dimgray);
     box-sizing: border-box;
     overflow: hidden;
+    display: flex;
+    align-items: center;
   }

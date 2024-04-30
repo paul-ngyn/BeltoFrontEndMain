@@ -6,7 +6,7 @@ import Image from 'next/image';
 const PaperClip: React.FC = () => {
   return (
     <button className= {styles.Paperclipbutton}>
-      <Image className="Paperclip" alt="" src="/assets/prompt-chat-field--alternativepapercliphorizontal@2x.png" width = {24} height = {24} />
+      <Image className="Paperclip" alt="" src="/assets/prompt-chat-field--alternativepapercliphorizontal@2x.png" width = {20} height = {18} />
       </button>
   );
 };

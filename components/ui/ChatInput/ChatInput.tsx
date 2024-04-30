@@ -9,7 +9,7 @@ interface ChatInputProps {
   const ChatInput: React.FC<ChatInputProps> = ({ placeholder = "Type your prompt here" }) => {
     return (
       <input
-        className="type-your-prompt"
+        className = {styles.ChatInput}
         placeholder={placeholder}
         type="text"
       />
