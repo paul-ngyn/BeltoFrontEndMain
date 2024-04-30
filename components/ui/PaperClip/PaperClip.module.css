@@ -6,12 +6,7 @@ margin-left: 3px;
 background-color: transparent;
 }
 .Paperclip {
-background-color: transparent;
-left: 0px;
 position: fixed;
-top: 15px;
-width: 12px;
-height: 12px;
 overflow: hidden;
 display: flex;
 }

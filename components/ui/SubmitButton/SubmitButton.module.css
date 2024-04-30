@@ -1,0 +1,14 @@
+    .Submitbutton {
+    cursor: pointer;
+    border: none;
+    padding: 2px;
+    margin-left: 3px;
+    background-color: var(--color-dimgray);
+    border-radius: 6px;
+    }
+    .Submit {
+    background-color: transparent;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    }

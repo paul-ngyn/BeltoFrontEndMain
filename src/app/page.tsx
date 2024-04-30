@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import ToolDropdown from '../../components/ui/ToolDropdown/ToolDropdown';
 import Monitor from '../../components/ui/MonitorLogo/MonitorLogo';
 import PaperClip from '../../components/ui/PaperClip/PaperClip';
+import SubmitButton from '../../components/ui/SubmitButton/SubmitButton';
 
 const Home: React.FC = () => {
   return (
@@ -30,9 +31,7 @@ const Home: React.FC = () => {
             placeholder="Type your prompt here"
             type="text"
           />
-          <button className="Submit">
-            <img className="Submit-Button" alt="" src="/assets/SubmitButton.svg" />
-          </button>
+          <SubmitButton/>
         </div>
 
       </div>
