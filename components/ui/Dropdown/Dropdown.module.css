@@ -1,8 +1,8 @@
   .dropdown {
-    position: relative;
+    position: absolute;
     display: flex;
-    left: 5vw;
-    top: 3.5vh; 
+    left: 52%;
+    top: 40%; 
     width: fit-content;
   }
   
@@ -22,14 +22,14 @@
   }
 
   .button span {
-    margin-right: 30px;
+    margin-right: 13px;
   }
 
   .caret {
     fill: #333;
     margin-left: 10px;
-    height: 22px;
-    width: 22px;
+    height: 25px;
+    width: 24px;
     top: 40%;
   }
   

@@ -1,8 +1,8 @@
 .Chatbox {
     position: relative;
-    left: 32%;
-    top: 10vh;
-    width: 36vw;
+    left: 28%;
+    top: 17vh;
+    width: 50%;
     height: 5.55vh;
     border-radius: 14px;
     background-color: var(--color-gray-200);
