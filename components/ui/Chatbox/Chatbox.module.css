@@ -1,7 +1,7 @@
 .Chatbox {
     position: relative;
-    top: 8vh;
     left: 32%;
+    top: 10vh;
     width: 36vw;
     height: 5.55vh;
     border-radius: 14px;
@@ -11,6 +11,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 10px;
     z-index: 10;
   }
