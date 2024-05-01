@@ -1,0 +1,14 @@
+navigation-bar {
+    position: absolute;
+    top: 1vh;
+    background-color: var(--color-gray-200);
+    width: 1920px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+  }

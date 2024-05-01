@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Burger: React.FC = () => {
   return (
     <button className= {styles.BurgerButton}>
-      <Image className="Burger" alt="" src="/assets/burger.svg" width = {32} height = {32} />
+      <Image className="Burger" alt="" src="/assets/burger.svg" width = {36} height = {36} />
       </button>
   );
 };
