@@ -1,8 +1,8 @@
   .dropdown {
-    position: absolute;
+    position: relative;
     display: flex;
-    left: 52%;
-    top: 40%; 
+    left: 7.5%;
+    top: 10px; 
     width: fit-content;
   }
   
