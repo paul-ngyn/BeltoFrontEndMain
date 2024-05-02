@@ -4,7 +4,7 @@
     top: 10vh;
     width: 48%;
     height: 5.55vh  ;
-    border-radius: 14px;
+    border-radius: 16px;
     background-color: var(--color-gray-200);
     border: 2px solid var(--color-dimgray);
     box-sizing: border-box;
@@ -13,4 +13,4 @@
     align-items: center;
     padding: 10px;
     z-index: 10;
-  }
+  } 
