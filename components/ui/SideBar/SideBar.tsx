@@ -13,7 +13,7 @@ const Sidebar: React.FC<{ isOpen: boolean; toggle: () => void }> = ({ isOpen, to
         <li><a href="#option3">Option 3</a></li>
         <li><a href="#option3">Option 4</a></li>
       </ul>
-      <Image className= {styles.Line} alt = '' src = '/assets/line-10@2x.png' width = {300} height = {2}/>
+      <Image className= {styles.Line} alt = '' src = '/assets/line-10@2x.png' width = {230} height = {2}/>
     </div>
   );
 };

@@ -1,14 +1,12 @@
 .sidebar {
   position: fixed; /* Make the sidebar fixed position */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
   width: 15%; /* Set the width to 15% of the screen width */
   height: 100vh; /* Make it full height */
   transform: translateX(-100%); /* Move it off the screen */
-  transition: transform 0.3s ease-out; /* Animate the transform */
+  transition: transform 0.2s ease-out; /* Animate the transform */
   overflow: hidden;
   flex-direction: column;
-  justify-content: center;
+  justify-content: normal;
   display: flex;
 }
   
@@ -23,15 +21,13 @@
     left: 0;
     justify-content: center;
     align-items: center;
-    transition: transform 0.4s ease-in; /* Animate the transform */
+    transition: transform 0.325s ease-in; /* Animate the transform */
   }
 
   .closeButton {
-    position: absolute;
-    left: 11.5vw; /* Adjust as needed */
-    top: 46%;
-    transform: translateY(90%);
-    color: var(--color-gray-100);
+    position: relative;
+    left: 11.6vw; /* Adjust as needed */
+    top: 48%;
     border: 0;
     padding-right: 2px;
     padding-left: 2px;
@@ -39,5 +35,5 @@
   }
   .Line { 
     position: relative;
-    top: 78%;   
+    top: 70%;   
   }
