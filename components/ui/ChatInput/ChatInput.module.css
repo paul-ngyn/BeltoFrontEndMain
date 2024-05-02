@@ -7,7 +7,7 @@
     position: absolute;
     top: 1.5vh;
     left: 88px;
-    color: var(--color-gray-300);
+    color: var(--color-gray-500);
     text-align: left;
     width: calc(100% - 176px);
     flex-grow: 1;

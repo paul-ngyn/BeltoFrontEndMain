@@ -6,7 +6,7 @@ interface ChatInputProps {
   }
   
   // Functional component with props
-  const ChatInput: React.FC<ChatInputProps> = ({ placeholder = "Type your prompt here" }) => {
+  const ChatInput: React.FC<ChatInputProps> = ({ placeholder = "Type your prompt here..." }) => {
     return (
       <input
         className = {styles.ChatInput}
