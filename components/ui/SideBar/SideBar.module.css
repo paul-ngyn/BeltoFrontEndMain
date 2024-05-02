@@ -1,0 +1,40 @@
+.sidebar {
+  position: fixed; /* Make the sidebar fixed position */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 15%; /* Set the width to 15% of the screen width */
+  height: 100vh; /* Make it full height */
+  transform: translateX(-100%); /* Move it off the screen */
+  transition: transform 0s ease-out; /* Animate the transform */
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+  
+  .sidebarOpen {
+    background-color: var(--color-gray-100); /* Set the background color to grey */
+    overflow: hidden;
+    z-index: 101;
+    height: 100%;
+    width: 11%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .closeButton {
+    position: absolute;
+    left: 10vw; /* Adjust as needed */
+    top: 47%;
+    transform: translateY(90%);
+    color: var(--color-gray-100);
+    border: 0;
+    padding: 1px;
+  }
+  .Line {
+    position: relative;
+    top: 78.5%;   
+  }

@@ -7,7 +7,7 @@ import styles from './MonitorLogo.module.css'
 const Monitor: React.FC = () => {
   return (
     <button className= {styles.monitorarrowup}>
-      <Image className="Monitor" alt="" src="/assets/arrow.svg" width = {19} height = {20} />
+      <Image className="Monitor" alt="" src="/assets/arrow.svg" width = {24} height = {24} />
     </button>
   );
 };
