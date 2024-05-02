@@ -17,7 +17,7 @@
     overflow: hidden;
     z-index: 101;
     height: 100%;
-    width: 11%;
+    width: 12%;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,14 +27,16 @@
 
   .closeButton {
     position: absolute;
-    left: 10vw; /* Adjust as needed */
-    top: 47%;
+    left: 11.5vw; /* Adjust as needed */
+    top: 46%;
     transform: translateY(90%);
     color: var(--color-gray-100);
     border: 0;
-    padding: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-top: 1px;
   }
-  .Line {
+  .Line { 
     position: relative;
-    top: 78.5%;   
+    top: 78%;   
   }
