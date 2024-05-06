@@ -1,10 +1,10 @@
 .Chatbox {
     position: relative;
     left: 28%;
-    top: 17vh;
-    width: 50%;
-    height: 5.55vh;
-    border-radius: 14px;
+    top: 10vh;
+    width: 43%;
+    height: 5.55vh  ;
+    border-radius: 16px;
     background-color: var(--color-gray-200);
     border: 2px solid var(--color-dimgray);
     box-sizing: border-box;
@@ -13,4 +13,4 @@
     align-items: center;
     padding: 10px;
     z-index: 10;
-  }
+  } 

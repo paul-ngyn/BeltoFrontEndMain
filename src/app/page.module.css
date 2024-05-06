@@ -1,73 +1,9 @@
-.burger {
-  position: fixed;
-  object-fit: contain;
-  top: 3vh;
-  right: 97vw;
-  
-}
-.list {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  width: 32px;
-  position: relative;
-  height: 32px;
-  overflow: hidden;
-  flex-shrink: 0;
+.content {
+  transition: transform 0.3s ease-out;
 }
 
-.navigation-bar {
-  position: absolute;
-  top: 1vh;
-  background-color: var(--color-gray-200);
-  width: 1920px;
-  height: 65px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: default;
-}
-/* .beltologo {
-  margin: 0;
-  position: sticky;
-  bottom: 10vh;
-  left: 7vw;
-  width: 10vw;
-  height: 160px;
-  object-fit: cover;
-} */
-.elto {
-  color: var(--color-white);
-}
-/* .belto {  belto text properties 
-    display: flex;
-    margin: 0;
-    position: relative;
-    font-size: inherit;
-    font-weight: 400;
-    font-family: inherit;
-    flex-shrink: 0;
-    height: auto;
-    margin: 13px;
-} */
-.gold-text {
-  color: --color-gold; /* Apply yellow color specifically to "B" */
-}
-.chatbox {
-  position: absolute;
-  top: 50vh;
-  left: 32vw;
-  border-radius: var(--br-base);
-  background-color: var(--color-gray-200);
-  border: 2px solid var(--color-dimgray);
-  box-sizing: border-box;
-  width: 768px;
-  height: 54px;
-  overflow: hidden;
+.contentOpen {
+  transform: translateX(15%); /* Move the content to the right by the width of the sidebar */
 }
 .monitor {
     cursor: pointer;
@@ -272,65 +208,8 @@
   justify-content: flex-start;
   opacity: 0;
 } */
-.esg {
-  margin: 0;
-  width: 66px;
-  position: relative;
-  font-size: inherit;
-  font-weight: 350;
-  font-family: inherit;
-  display: inline-block;
-  flex-shrink: 0;
-}
-.caret{
-  position: relative;
-  height: 31.25%;
-  width: 46.5%;
-  top:  7.5%;
-  right: 0.75%;
-  bottom: 31.25%;
-  left: 7.75%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.caretdown {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  width: 46px;
-  position: relative;
-  height: 40px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.esg-parent {
-  border-radius: var(--br-base);
-  background-color: var(--color-gray-400);
-  align-items: center;
-  padding: var(--padding-5xs) var(--padding-5xs);
-  gap: var(--gap-5xs);
-  flex-shrink: 0;
-  display: flex;
-}
-.tools-dropdown-narrow { /* dropdown position */
-  position: fixed;
-  display: flex;
-  top: 36vh;
-  left: 51vw;
-  transform: translateX(-50%);
-  flex-direction: row;
-  align-items: center;
-  font-size: var(--font-size-17xl);
-  color: var(--color-gray-300);
-  gap: 5px;
-}
-.esg-parent,
-.tools-dropdown-narrow {
-  display: flex;
-  justify-content: flex-start;
-}
+
+
 .ai-interface-first-look-child {
   position: absolute;
   top: 651px;

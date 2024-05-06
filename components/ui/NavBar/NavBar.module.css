@@ -1,4 +1,4 @@
-navigation-bar {
+.navigation-bar {
     position: absolute;
     top: 1vh;
     background-color: var(--color-gray-200);
@@ -11,4 +11,5 @@ navigation-bar {
     padding: 0;
     box-sizing: border-box;
     cursor: default;
+    z-index: 1;
   }

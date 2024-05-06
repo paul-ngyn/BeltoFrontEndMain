@@ -6,7 +6,7 @@ import Image from 'next/image';
 const SubmitButton: React.FC = () => {
   return (
     <button type = "submit" className= {styles.Submitbutton}>
-      <Image className= {styles.Submit} alt="" src="/assets/SubmitButton.svg" width = {21} height = {19} />
+      <Image className= {styles.Submit} alt="" src="/assets/SubmitButton.svg" width = {21} height = {21} />
       </button>
   );
 };
