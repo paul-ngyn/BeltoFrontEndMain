@@ -6,7 +6,7 @@
   transition: transform 0.2s ease-out; /* Animate the transform */
   overflow: hidden;
   flex-direction: column;
-  justify-content: normal;
+  justify-content: space-between;
   display: flex;
 }
   
@@ -22,18 +22,80 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.325s ease-in; /* Animate the transform */
+    padding-top: 40px;
   }
-
   .closeButton {
-    position: relative;
-    left: 11.6vw; /* Adjust as needed */
-    top: 48%;
+    position: fixed;
+    left: 13vw; /* Adjust as needed */
+    top: 47vh;
     border: 0;
     padding-right: 2px;
     padding-left: 2px;
     padding-top: 1px;
+    transform: 0.5s ease-in, opacity 0.5s ease-in;
+    background-color: transparent;
+
   }
+
   .Line { 
     position: relative;
-    top: 70%;   
+    top: 50%;
+    margin-bottom: 10px;
+  }
+  .optionContainer {
+    padding: 9px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 7px;
+    margin-right: 7px;
+    background-color: var(--color-gray-500);
+    border-radius: 10px;
+    border: 2px solid var(--color-gray-400);
+  }
+  .dashboardContainer {
+    padding: 9px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 7px;
+    margin-right: 7px;
+    background-color: var(--color-gray-500);
+    border-radius: 10px;
+    border: 2px solid var(--color-gray-400);
+  }
+  .usernameContainer {
+    padding: 9px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 7px;
+    margin-right: 7px;
+    background-color: var(--color-gray-500);
+    border-radius: 10px;
+    border: 2px solid var(--color-gray-400);
+  }
+  .lowerContent {
+    margin-top: 46vh;
+  }
+  .addButton {
+      background-color: var(--color-gray-500); /* Green */
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      justify-content: center;
+
+  }
+  .addButtonContainer {
+    padding: 9px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 7px;
+    margin-right: 7px;
+    background-color: var(--color-gray-500);
+    border-radius: 10px;
+    border: 2px solid var(--color-gray-400);
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
