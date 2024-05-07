@@ -34,7 +34,6 @@
     padding-top: 1px;
     transform: 0.5s ease-in, opacity 0.5s ease-in;
     background-color: transparent;
-
   }
 
   .Line { 
@@ -51,8 +50,19 @@
     background-color: var(--color-gray-500);
     border-radius: 10px;
     border: 2px solid var(--color-gray-400);
+    font-size: 14px;
+    height: 42px;
+  }
+  .inputField {
+    /* Add your styles here */
+    color: var(--color-gray-500);
+    background-color: transparent;
+    font-size: 12px;
+    padding: 2px;
+    border: none;
   }
   .dashboardContainer {
+    display: flex;
     padding: 9px;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -61,6 +71,10 @@
     background-color: var(--color-gray-500);
     border-radius: 10px;
     border: 2px solid var(--color-gray-400);
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
   }
   .usernameContainer {
     padding: 9px;
@@ -71,9 +85,11 @@
     background-color: var(--color-gray-500);
     border-radius: 10px;
     border: 2px solid var(--color-gray-400);
+    font-size: 14px;
+    height: 42px;
   }
   .lowerContent {
-    margin-top: 46vh;
+    margin-top: 47vh;
   }
   .addButton {
       background-color: var(--color-gray-500); /* Green */
@@ -98,4 +114,26 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    font-size: 14px;
+    height: 42px;
+  }
+  .firstLetter {
+    color: gold;
+    margin-left: 5px;
+  }
+  .restOfString {
+    color: white;
+  }
+
+  .desktop {
+    position: relative;
+    margin-left: auto;
+    margin-right: 5px;
+  }
+  
+  .usernameText {
+    margin-left: 5px;
+  }
+  .dashboardText {
+    margin-left: 5px;
   }
