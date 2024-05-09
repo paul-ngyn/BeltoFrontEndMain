@@ -5,13 +5,14 @@ import './globals.css';
 import './page.module.css'
 import ToolDropdown from '../../components/ui/ToolDropdown/ToolDropdown';
 import Chatbox from '../../components/ui/Chatbox/Chatbox';
-import Burger from '../../components/ui/Burger/Burger';
 import NavigationBar from '../../components/ui/NavBar/NavBar';
 import Sidebar from '../../components/ui/SideBar/SideBar';
+import ResponseSection from '../../components/ui/ResponseSection/ResponseSection';
 
 
 const Home: React.FC = () => {
 const [isOpen, setIsOpen] = useState(false);
+const [chatHistory, setChatHistory] = useState<{ text: string; sender: string; }[]>([]);
 const toggleSidebar = () => { setIsOpen(!isOpen);
   };
   return (
@@ -27,6 +28,7 @@ const toggleSidebar = () => { setIsOpen(!isOpen);
         <Sidebar isOpen={isOpen} toggle={toggleSidebar} />
         <div className={isOpen ? 'contentOpen' : 'content'}>
           <ToolDropdown/>
+          <ResponseSection chatHistory={chatHistory}/>
           <Chatbox/>
         </div>
       </div>
