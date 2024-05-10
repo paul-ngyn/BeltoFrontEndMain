@@ -9,14 +9,20 @@ import NavigationBar from '../../components/ui/NavBar/NavBar';
 import Sidebar from '../../components/ui/SideBar/SideBar';
 import ResponseSection from '../../components/ui/ResponseSection/ResponseSection';
 
-
 const Home: React.FC = () => {
-const [isOpen, setIsOpen] = useState(false);
-const [chatHistory, setChatHistory] = useState<{ text: string; sender: string; }[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [chatHistory, setChatHistory] = useState<{ text: string; sender: string; }[]>([]);
+  const [messageSent, setMessageSent] = useState(false); // New state variable
 
-const toggleSidebar = () => { setIsOpen(!isOpen);
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   };
-  
+
+  const handleChatHistoryChange = (newChatHistory: { text: string; sender: string; }[]) => {
+    setChatHistory(newChatHistory);
+    setMessageSent(true); // Update messageSent when a message is sent
+  };
+
   return (
     <>
       <Head>
@@ -29,12 +35,13 @@ const toggleSidebar = () => { setIsOpen(!isOpen);
         <NavigationBar toggleSidebar={toggleSidebar}/>
         <Sidebar isOpen={isOpen} toggle={toggleSidebar} />
         <div className={isOpen ? 'contentOpen' : 'content'}>
-          <ToolDropdown/>
+          {!messageSent && <ToolDropdown/>} {/* Conditionally render ToolDropdown */}
           <ResponseSection chatHistory={chatHistory}/>
-          <Chatbox chatHistory={chatHistory} setChatHistory={setChatHistory}/>
+          <Chatbox chatHistory={chatHistory} setChatHistory={setChatHistory} onMessageSend={() => setMessageSent(true)} messageSent = {messageSent}/>
         </div>
       </div>
     </>
   );
 };
+
 export default Home;
