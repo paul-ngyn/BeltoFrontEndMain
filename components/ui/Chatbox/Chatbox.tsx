@@ -6,10 +6,14 @@ import ChatInput from '../ChatInput/ChatInput';
 import SubmitButton from '../SubmitButton/SubmitButton';
 import ResponseSection from '../ResponseSection/ResponseSection';
 
-const Chatbox: React.FC = () => {
+type ChatboxProps = {
+    chatHistory: { text: string; sender: string; }[];
+    setChatHistory: React.Dispatch<React.SetStateAction<{ text: string; sender: string; }[]>>;
+  };
+
+const Chatbox: React.FC<ChatboxProps> = ({ chatHistory, setChatHistory }) => {
     const [message, setMessage] = useState('');
-    const [chatHistory, setChatHistory] = useState<{ text: string; sender: string; }[]>([]);
-  
+
     const handleSendMessage = () => {
       // Add the message to the chat history
       setChatHistory([...chatHistory, { text: message, sender: 'user' }]);
@@ -26,7 +30,6 @@ const Chatbox: React.FC = () => {
       <div className={styles.Chatbox}>
         <Monitor/>
         <PaperClip/>
-        <ResponseSection chatHistory={chatHistory}/>
         <ChatInput message={message} setMessage={setMessage} />
         <SubmitButton handleSendMessage={handleSendMessage} />
       </div>

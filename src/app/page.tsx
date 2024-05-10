@@ -13,8 +13,10 @@ import ResponseSection from '../../components/ui/ResponseSection/ResponseSection
 const Home: React.FC = () => {
 const [isOpen, setIsOpen] = useState(false);
 const [chatHistory, setChatHistory] = useState<{ text: string; sender: string; }[]>([]);
+
 const toggleSidebar = () => { setIsOpen(!isOpen);
   };
+  
   return (
     <>
       <Head>
@@ -29,7 +31,7 @@ const toggleSidebar = () => { setIsOpen(!isOpen);
         <div className={isOpen ? 'contentOpen' : 'content'}>
           <ToolDropdown/>
           <ResponseSection chatHistory={chatHistory}/>
-          <Chatbox/>
+          <Chatbox chatHistory={chatHistory} setChatHistory={setChatHistory}/>
         </div>
       </div>
     </>
