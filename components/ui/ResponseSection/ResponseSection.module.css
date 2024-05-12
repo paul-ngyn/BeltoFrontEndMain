@@ -17,8 +17,8 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   overflow-x: auto; /* Add this line */
   overflow-y: visible; /* Add this line */
-  max-height: 70vh;
-  max-width: 50vw;
+  max-height: 85vh;
+  max-width: 45vw;
 }
 
 
@@ -31,6 +31,7 @@
   height: auto;
   max-width: 100%;
   overflow-wrap: break-word;
+  font-size: 12px;
 }
 
 .user {
