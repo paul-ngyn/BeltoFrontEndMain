@@ -1,8 +1,9 @@
 .dropdown {
     position: relative;
     display: flex;
-    bottom: 0vh; 
+    bottom: 2%; 
     width: fit-content;
+    margin-left: 1px;
   }
   
   .button {
@@ -12,7 +13,7 @@
     border-radius: 0px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 300;
     width: 80px;
     height: fit-content;
@@ -27,8 +28,8 @@
   .caret {
     fill: #333;
     margin-left: 0px;
-    height: 11px;
-    width: 11px;
+    height: 16px;
+    width: 16px;
     top: 40%;
   }
   

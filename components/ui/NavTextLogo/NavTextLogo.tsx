@@ -10,7 +10,7 @@ interface NavTextLogoProps {
   const NavTextLogo: React.FC<NavTextLogoProps> = ({ className }) => {
     return (
       <div className={`${styles.belto} ${className}`}>
-          <Image src="/assets/belto.svg" alt="Beltotext" width={80} height={40} />
+          <Image src="/assets/belto.svg" alt="Beltotext" width={65} height={30} />
     </div>
   );
 };

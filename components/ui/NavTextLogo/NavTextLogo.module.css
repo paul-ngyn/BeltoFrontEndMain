@@ -7,8 +7,8 @@
     flex-shrink: 0;
     height: auto;
     width: 80%;
-    right: 0vw;
-    top: 0vh;
+    right: 0;
+    bottom: 4%;
     width: fit-content; 
-    margin-left: 24px;
+    margin-left: 20px;
 }
