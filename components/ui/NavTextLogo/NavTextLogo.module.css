@@ -1,6 +1,5 @@
 .belto { /*belto text properties */
     display: flex;
-    margin-right: 4px;
     position: relative;
     font-size: inherit;
     font-weight: 400;
@@ -8,8 +7,8 @@
     flex-shrink: 0;
     height: auto;
     width: 80%;
-    padding: 2px;
-    right: 4vw;
-    top: 10vh;
+    right: 0vw;
+    top: 0vh;
     width: fit-content; 
+    margin-left: 24px;
 }

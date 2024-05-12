@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       </Head>
 
       <div className="ai-interface-first-look">
-        <NavigationBar toggleSidebar={toggleSidebar}/>
+      <NavigationBar toggleSidebar={toggleSidebar} messageSent={messageSent} />
         <Sidebar isOpen={isOpen} toggle={toggleSidebar} />
         <div className={isOpen ? 'contentOpen' : 'content'}>
           {!messageSent && <ToolDropdown/>} {/* Conditionally render ToolDropdown */}
