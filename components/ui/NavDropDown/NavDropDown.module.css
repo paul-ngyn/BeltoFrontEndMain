@@ -3,7 +3,7 @@
     display: flex;
     bottom: 2%; 
     width: fit-content;
-    margin-left: 0px;
+    margin: 0 auto;
   }
   
   .button {
