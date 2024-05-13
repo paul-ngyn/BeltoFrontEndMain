@@ -5,4 +5,5 @@
     height: 10%; /* Fixed height for the logo */
     top: 8vh;
     object-fit: cover; /* Ensures the image covers the area of the box without distorting its aspect ratio */
+    margin-bottom: 5px;
   }

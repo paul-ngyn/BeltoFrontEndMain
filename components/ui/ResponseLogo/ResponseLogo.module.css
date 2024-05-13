@@ -3,15 +3,15 @@
       opacity: 0;
     }
     to {
-      opacity: 0.12;
+      opacity: 0.11;
     }
   }
 
 .beltologo {
     margin: 0;
     position: absolute; /* Change from relative to absolute */
-    top: 42%; /* Position at 50% from the top */
-    left: 47%; /* Position at 50% from the left */
+    top: 40%; /* Position at 50% from the top */
+    left: 48%; /* Position at 50% from the left */
     width: 9vw; /* Logo width as a percentage of the viewport width */
     height: 10%; /* Fixed height for the logo */
     object-fit: cover; /* Ensures the image covers the area of the box without distorting its aspect ratio */
