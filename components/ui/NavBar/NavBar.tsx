@@ -8,10 +8,10 @@ import NavDropDown from '../NavDropDown/NavDropDown.client';
 interface NavigationBarProps {
   title?: string;
   toggleSidebar: () => void;
-  messageSent: boolean; // Add this prop
+  messageSent: boolean;
 }
 
-const NavigationBar: React.FC<NavigationBarProps> = ({ title, toggleSidebar, messageSent }) => {
+const NavigationBar: React.FC<NavigationBarProps & { sidebarOpen: boolean }> = ({ title, toggleSidebar, messageSent, sidebarOpen }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -19,20 +19,19 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ title, toggleSidebar, mes
   };
 
   return (
-    <header className={styles.navigationBar} id="navigationBar">
-      {title && <h1>{title}</h1>}
-      <div className = {styles.navItems}>
-      <Burger onClick={toggleSidebar} />
-      {messageSent && (
-        <>
-          <NavTextLogo className = {styles.NavTextLogo} /> 
-          <NavDropDown className = {styles.NavDropDown} /> 
-        </>
-      )}
+    <header className={`${styles.navigationBar} ${sidebarOpen ? styles.sidebarOpen : ''}`} id="navigationBar">
+      {title && <h1>{title}</h1>} 
+      <div className={styles.navItems}>
+        {!sidebarOpen && <Burger onClick={toggleSidebar} />}
+        {messageSent && (
+          <>
+            <NavTextLogo className={styles.NavTextLogo} /> 
+            <NavDropDown className={styles.NavDropDown} /> 
+          </>
+        )}
       </div>
     </header>
   );
 };
-
 
 export default NavigationBar;

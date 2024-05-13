@@ -3,7 +3,7 @@
     display: flex;
     bottom: 2%; 
     width: fit-content;
-    margin-left: 1px;
+    margin-left: 0px;
   }
   
   .button {
@@ -13,8 +13,8 @@
     border-radius: 0px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 21px;
-    font-weight: 300;
+    font-size: 22px;
+    font-weight: 400;
     width: 80px;
     height: fit-content;
     justify-content: space-between;

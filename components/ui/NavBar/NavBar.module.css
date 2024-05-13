@@ -30,3 +30,7 @@
   display: flex;
   align-items: center;
 }
+
+.sidebarOpen {
+  transform: translateX(250px); /* Adjust this value based on the width of your sidebar */
+}
