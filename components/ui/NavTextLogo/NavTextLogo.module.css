@@ -1,15 +1,14 @@
 .belto { /*belto text properties */
     display: flex;
-    margin-right: 4px;
     position: relative;
     font-size: inherit;
     font-weight: 400;
     font-family: inherit;
     flex-shrink: 0;
     height: auto;
-    width: 80%;
-    padding: 2px;
-    right: 4vw;
-    top: 10vh;
+    right: 0;
+    bottom: 4%;
     width: fit-content; 
+    margin-left: 20px;
 }
+

@@ -3,7 +3,7 @@
   width: 15%; /* Set the width to 15% of the screen width */
   height: 100vh; /* Make it full height */
   transform: translateX(-100%); /* Move it off the screen */
-  transition: transform 0.2s ease-out; /* Animate the transform */
+  transition: transform 0.3s ease-out; /* Animate the transform */
   overflow: hidden;
   flex-direction: column;
   justify-content: space-between;
@@ -21,7 +21,7 @@
     left: 0;
     justify-content: center;
     align-items: center;
-    transition: transform 0.325s ease-in; /* Animate the transform */
+    transition: transform 0.3s ease-in; /* Animate the transform */
     padding-top: 40px;
   }
   .closeButton {
@@ -37,9 +37,10 @@
   }
 
   .Line { 
-    position: relative;
-    top: 50%;
+    position: fixed;
+    bottom: 15%;
     margin-bottom: 10px;
+    width: 12.5%;
   }
   .optionContainer {
     padding: 9px;
@@ -75,6 +76,9 @@
     justify-content: center;
     align-items: center;
     height: 42px;
+    position: fixed;
+    bottom: 8%;
+    width: 11.25%;
   }
   .usernameContainer {
     padding: 9px;
@@ -87,6 +91,9 @@
     border: 2px solid var(--color-gray-400);
     font-size: 14px;
     height: 42px;
+    position: fixed;
+    bottom: 2%;
+    width: 11.25%;
   }
   .lowerContent {
     margin-top: 47vh;

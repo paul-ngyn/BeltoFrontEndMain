@@ -10,7 +10,7 @@ interface BurgerProps {
 const Burger: React.FC<BurgerProps> = ({onClick}) => {
   return (
     <button className= {styles.BurgerButton} onClick={onClick}>
-      <Image className="Burger" alt="" src="/assets/burger.svg" width = {36} height = {36} />
+      <Image className="Burger" alt="" src="/assets/burger.svg" width = {34} height = {34} />
       </button>
   );
 };

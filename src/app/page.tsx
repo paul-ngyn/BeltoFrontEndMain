@@ -8,13 +8,24 @@ import Chatbox from '../../components/ui/Chatbox/Chatbox';
 import NavigationBar from '../../components/ui/NavBar/NavBar';
 import Sidebar from '../../components/ui/SideBar/SideBar';
 import ResponseSection from '../../components/ui/ResponseSection/ResponseSection';
-
+import ResponseLogo from '../../components/ui/ResponseLogo/ResponseLogo';
 
 const Home: React.FC = () => {
-const [isOpen, setIsOpen] = useState(false);
-const [chatHistory, setChatHistory] = useState<{ text: string; sender: string; }[]>([]);
-const toggleSidebar = () => { setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false); // Declare sidebarOpen state variable
+  const [chatHistory, setChatHistory] = useState<{ text: string; sender: string; }[]>([]);
+  const [messageSent, setMessageSent] = useState(false); // New state variable
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+    setSidebarOpen(!sidebarOpen);
   };
+
+  const handleChatHistoryChange = (newChatHistory: { text: string; sender: string; }[]) => {
+    setChatHistory(newChatHistory);
+    setMessageSent(true); // Update messageSent when a message is sent
+  };
+
   return (
     <>
       <Head>
@@ -24,15 +35,17 @@ const toggleSidebar = () => { setIsOpen(!isOpen);
       </Head>
 
       <div className="ai-interface-first-look">
-        <NavigationBar toggleSidebar={toggleSidebar}/>
+        <NavigationBar toggleSidebar={toggleSidebar} messageSent={messageSent} sidebarOpen={sidebarOpen}/>
         <Sidebar isOpen={isOpen} toggle={toggleSidebar} />
         <div className={isOpen ? 'contentOpen' : 'content'}>
-          <ToolDropdown/>
+          {messageSent && <ResponseLogo/>}
+          {!messageSent && <ToolDropdown/>} {/* Conditionally render ToolDropdown */}
           <ResponseSection chatHistory={chatHistory}/>
-          <Chatbox/>
+          <Chatbox chatHistory={chatHistory} setChatHistory={setChatHistory} onMessageSend={() => setMessageSent(true)} messageSent = {messageSent}/>
         </div>
       </div>
     </>
   );
 };
+
 export default Home;

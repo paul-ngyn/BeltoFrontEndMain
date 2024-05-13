@@ -1,22 +1,21 @@
-  .dropdown {
+.dropdown {
     position: relative;
     display: flex;
-    left: 4.5vw;
-    top: 3.4vh; 
+    bottom: 2%; 
     width: fit-content;
-    margin-left: 1px;
+    margin: 0 auto;
   }
   
   .button {
-    background-color: var(--color-gray-400); 
+    background-color: transparent; 
     color: var(--color-gray-300); /*text*/
-    padding: 5.5px;
-    border-radius: 18px;
+    padding: 1px;
+    border-radius: 0px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 36px;
-    font-weight: 300;
-    width: 150px;
+    font-size: 22px;
+    font-weight: 400;
+    width: 80px;
     height: fit-content;
     justify-content: space-between;
     border: none;
@@ -28,9 +27,9 @@
 
   .caret {
     fill: #333;
-    margin-left: 6px;
-    height: 21px;
-    width: 22px;
+    margin-left: 0px;
+    height: 16px;
+    width: 16px;
     top: 40%;
   }
   

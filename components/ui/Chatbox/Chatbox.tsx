@@ -6,31 +6,37 @@ import ChatInput from '../ChatInput/ChatInput';
 import SubmitButton from '../SubmitButton/SubmitButton';
 import ResponseSection from '../ResponseSection/ResponseSection';
 
-const Chatbox: React.FC = () => {
+type ChatboxProps = {
+    chatHistory: { text: string; sender: string; }[];
+    setChatHistory: React.Dispatch<React.SetStateAction<{ text: string; sender: string; }[]>>;
+    onMessageSend: () => void; // Add this line
+    messageSent: boolean; // Add this line
+};
+
+const Chatbox: React.FC<ChatboxProps> = ({ chatHistory, setChatHistory, onMessageSend, messageSent }) => {
     const [message, setMessage] = useState('');
-    const [chatHistory, setChatHistory] = useState<{ text: string; sender: string; }[]>([]);
-  
+
     const handleSendMessage = () => {
       // Add the message to the chat history
       setChatHistory([...chatHistory, { text: message, sender: 'user' }]);
-  
+      onMessageSend(); // Call onMessageSend when a message is sent
+
       // Generate a response
       const response = 'This is a response to your message.';
-      setChatHistory([...chatHistory, { text: message, sender: 'user' }, { text: response, sender: 'bot' }]);
-  
+      setChatHistory(prevChatHistory => [...prevChatHistory, { text: response, sender: 'bot' }]);
+
       // Clear the input field
       setMessage('');
     };
-  
+
     return (
-      <div className={styles.Chatbox}>
+      <div className= {`${styles.Chatbox} ${messageSent ? styles.ChatboxBottom : ''}`}>
         <Monitor/>
         <PaperClip/>
-        <ResponseSection chatHistory={chatHistory}/>
-        <ChatInput message={message} setMessage={setMessage} />
+        <ChatInput message={message} setMessage={setMessage} handleSendMessage={handleSendMessage} />
         <SubmitButton handleSendMessage={handleSendMessage} />
       </div>
     );
-  };
-  
-  export default Chatbox;
+};
+
+export default Chatbox;

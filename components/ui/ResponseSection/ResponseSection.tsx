@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './ResponseSection.module.css';
 
 type Chat = {
@@ -11,12 +11,20 @@ type ResponseSectionProps = {
 };
 
 const ResponseSection: React.FC<ResponseSectionProps> = ({ chatHistory }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight;
+    }
+  }, [chatHistory]);
+
   return (
-    <div className="responseSection">
+    <div className={styles.responseContainer} ref={containerRef}>
       {chatHistory.map((chat, index) => (
-        <p key={index} className={chat.sender === 'user' ? 'userMessage' : 'botMessage'}>
-          <b>{chat.sender}:</b> {chat.text}
-        </p>
+        <div key={index} className={`${styles.message} ${chat.sender === 'user' ? styles.user : styles.bot}`}>
+          <strong>{chat.sender}:</strong> {chat.text}
+        </div>
       ))}
     </div>
   );
