@@ -5,7 +5,7 @@ import styles from './ResponseLogo.module.css'; // Assuming you have specific st
 const ResponseLogo: React.FC = () => {
   return (
     <div className={styles.beltologo}>
-          <Image src="/assets/beltologo.png" alt="BeltoLogo" width={250} height={250} />
+          <Image src="/assets/beltologo.png" alt="BeltoLogo" width={270} height={270} />
     </div>
   );
 };
