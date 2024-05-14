@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
 
-      <div className="ai-interface-first-look">
+      <div className="ai-interface-first-look" style={{ height: '100vh', overflow: 'hidden' }}>
         <NavigationBar toggleSidebar={toggleSidebar} messageSent={messageSent} sidebarOpen={sidebarOpen}/>
         <Sidebar isOpen={isOpen} toggle={toggleSidebar} />
         <div className={isOpen ? 'contentOpen' : 'content'}>

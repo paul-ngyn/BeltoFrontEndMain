@@ -1,5 +1,5 @@
 .sidebar {
-  position: fixed; /* Make the sidebar fixed position */
+  position: absolute; /* Make the sidebar fixed position */
   width: 15%; /* Set the width to 15% of the screen width */
   height: 100vh; /* Make it full height */
   transform: translateX(-100%); /* Move it off the screen */
@@ -16,7 +16,7 @@
     z-index: 101;
     height: 100%;
     width: 12.5%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     justify-content: center;
@@ -25,7 +25,7 @@
     padding-top: 40px;
   }
   .closeButton {
-    position: fixed;
+    position: absolute;
     left: 13vw; /* Adjust as needed */
     top: 47vh;
     border: 0;
@@ -37,10 +37,10 @@
   }
 
   .Line { 
-    position: fixed;
+    position: absolute;
     bottom: 15%;
     margin-bottom: 10px;
-    width: 12.5%;
+    width: 100%;
   }
   .optionContainer {
     padding: 9px;
@@ -76,9 +76,9 @@
     justify-content: center;
     align-items: center;
     height: 42px;
-    position: fixed;
+    position: absolute;
     bottom: 8%;
-    width: 11.25%;
+    width: 90%;
   }
   .usernameContainer {
     padding: 9px;
@@ -91,9 +91,9 @@
     border: 2px solid var(--color-gray-400);
     font-size: 14px;
     height: 42px;
-    position: fixed;
+    position: absolute;
     bottom: 2%;
-    width: 11.25%;
+    width: 90%;
   }
   .lowerContent {
     margin-top: 47vh;

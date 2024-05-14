@@ -1,17 +1,17 @@
   .dropdown {
     position: relative;
     display: flex;
-    left: 4.5vw;
-    top: 3.4vh; 
+    left: 4vw;
+    top: 2.6vh; 
     width: fit-content;
-    margin-left: 1px;
+    margin-left: 4px;
   }
   
   .button {
     background-color: var(--color-gray-400); 
     color: var(--color-gray-300); /*text*/
-    padding: 5.5px;
-    border-radius: 18px;
+    padding: 4px;
+    border-radius: 16px;
     cursor: pointer;
     font-family: inherit;
     font-size: 36px;
