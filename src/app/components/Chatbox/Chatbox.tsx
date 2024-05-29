@@ -4,13 +4,13 @@ import Monitor from '../MonitorLogo/MonitorLogo';
 import PaperClip from '../PaperClip/PaperClip';
 import ChatInput from '../ChatInput/ChatInput';
 import SubmitButton from '../SubmitButton/SubmitButton';
-import ResponseSection from '../ResponseSection/ResponseSection';
+//import ResponseSection from '../ResponseSection/ResponseSection';
 
 type ChatboxProps = {
-    chatHistory: { text: string; sender: string; }[];
-    setChatHistory: React.Dispatch<React.SetStateAction<{ text: string; sender: string; }[]>>;
-    onMessageSend: () => void; // Add this line
-    messageSent: boolean; // Add this line
+  chatHistory: { text: string; sender: string; }[];
+  setChatHistory: React.Dispatch<React.SetStateAction<{ text: string; sender: string; }[]>>;
+  onMessageSend: () => void; // Add this line
+  messageSent: boolean; // Add this line
 };
 
 const Chatbox: React.FC<ChatboxProps> = ({ chatHistory, setChatHistory, onMessageSend, messageSent }) => {
@@ -23,8 +23,8 @@ const Chatbox: React.FC<ChatboxProps> = ({ chatHistory, setChatHistory, onMessag
 
       // Generate a response
       const response = 'This is a response to your message.';
-      setChatHistory(prevChatHistory => [...prevChatHistory, { text: response, sender: 'bot' }]);
-
+      setChatHistory(prevChatHistory => [...prevChatHistory, { text: response, sender: 'Belto' }]);
+      
       // Clear the input field
       setMessage('');
     };

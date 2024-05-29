@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import './globals.css';
 import './page.module.css'
-import ToolDropdown from '../../components/ui/ToolDropdown/ToolDropdown';
-import Chatbox from '../../components/ui/Chatbox/Chatbox';
-import NavigationBar from '../../components/ui/NavBar/NavBar';
-import Sidebar from '../../components/ui/SideBar/SideBar';
-import ResponseSection from '../../components/ui/ResponseSection/ResponseSection';
-import ResponseLogo from '../../components/ui/ResponseLogo/ResponseLogo';
+import ToolDropdown from './components/ToolDropdown/ToolDropdown';
+import Chatbox from './components/Chatbox/Chatbox';
+import NavigationBar from './components/NavBar/NavBar';
+import Sidebar from './components/SideBar/SideBar';
+import ResponseSection from './components/ResponseSection/ResponseSection';
+import ResponseLogo from './components/ResponseLogo/ResponseLogo'; // Check if the file path is correct and if the required module exists in the specified location
 
 const Home: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
