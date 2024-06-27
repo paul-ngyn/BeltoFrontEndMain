@@ -8,8 +8,12 @@ class ChatService {
         return axios.get(`${API_BASE_URL}/models`);
     }
 
-    createChatCompletion(chat: { text: string; sender: string; }){
-        return axios.post(`${API_BASE_URL}/chat/completions`, chat);
+    createChatCompletion(chat: { text: string; sender: string; model: string; temperature: number; messages: any[] }) {
+        return axios.post(`${API_BASE_URL}/chat/completions`, {
+            model: chat.model,
+            messages: chat.messages,
+            temperature: chat.temperature
+        });
     }
 
     createCompletion(chat: { text: string; sender: string; }){

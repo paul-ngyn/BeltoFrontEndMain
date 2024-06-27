@@ -10,28 +10,40 @@ import ChatService from '../../services/ChatService';
 type ChatboxProps = {
   chatHistory: { text: string; sender: string; }[];
   setChatHistory: React.Dispatch<React.SetStateAction<{ text: string; sender: string; }[]>>;
-  onMessageSend: () => void; // Add this line
-  messageSent: boolean; // Add this line
+  onMessageSend: () => void;
+  messageSent: boolean;
 };
 
 const Chatbox: React.FC<ChatboxProps> = ({ chatHistory, setChatHistory, onMessageSend, messageSent }) => {
     const [message, setMessage] = useState('');
+    const model = "TheBloke/stablelm-zephyr-3b-GGUF"; // Define your model
+    const temperature = 0.7; // Define the temperature
 
     const handleSendMessage = async () => {
-      // Add the message to the chat history
-      setChatHistory([...chatHistory, { text: message, sender: 'user' }]);
-    
+      const newMessage = { text: message, sender: 'user' };
+      const updatedHistory = [...chatHistory, newMessage];
+
+      // Update chat history with user message
+      setChatHistory(updatedHistory);
+      onMessageSend(); // Call onMessageSend when a message is sent
+
       try {
-        // Send the message to the server and get a response
-        const response = await ChatService.createChatCompletion({ text: message, sender: 'user' });
+        // Send the user input to the server and get a response
+        const response = await ChatService.createChatCompletion({
+          text: message,
+          sender: 'user',
+          model: model,
+          temperature: temperature,
+          messages: updatedHistory // Send the current chat history as part of the messages
+        });
     
         // Add the server's response to the chat history
         setChatHistory(prevChatHistory => [...prevChatHistory, { text: response.data.text, sender: 'server' }]);
       } catch (error) {
         console.error('Error sending message:', error);
+        // Optionally handle error by showing in the chat
+        setChatHistory(prevChatHistory => [...prevChatHistory, { text: 'Failed to get response.', sender: 'server' }]);
       }
-    
-      onMessageSend(); // Call onMessageSend when a message is sent
     
       // Clear the input field
       setMessage('');
