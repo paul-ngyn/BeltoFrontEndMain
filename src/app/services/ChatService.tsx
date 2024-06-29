@@ -8,12 +8,18 @@ class ChatService {
         return axios.get(`${API_BASE_URL}/models`);
     }
 
-    createChatCompletion(chat: { text: string; sender: string; model: string; temperature: number; messages: any[] }) {
-        return axios.post(`${API_BASE_URL}/chat/completions`, {
+    createChatCompletion(chat: {
+        model: string;
+        messages: { role: string; content: string; }[];
+        temperature: number;
+    }) {
+        // Construct the data payload as the backend expects it
+        const data = {
             model: chat.model,
-            messages: chat.messages,
+            messages: chat.messages, // This should already be in the correct format
             temperature: chat.temperature
-        });
+        };
+        return axios.post(`${API_BASE_URL}/chat/completions`, data);
     }
 
     createCompletion(chat: { text: string; sender: string; }){
