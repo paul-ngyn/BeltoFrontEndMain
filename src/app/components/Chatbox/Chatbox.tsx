@@ -20,27 +20,24 @@ const Chatbox: React.FC<ChatboxProps> = ({ chatHistory, setChatHistory, onMessag
 
     const handleSendMessage = async () => {
       const newMessage = { role: 'user', content: message };
-      const updatedHistory = [...chatHistory.map(msg => ({ role: '', content:'' })), newMessage];
-
-      // Update chat history with user message
-      setChatHistory([...chatHistory, { role: 'user', content: message }]);
-      onMessageSend(); // Call onMessageSend when a message is sent
-
+      // Directly update chat history with the new user message
+      setChatHistory(prevHistory => [...prevHistory, newMessage]);
+      onMessageSend(); // Indicate that a message has been sent
+    
       try {
         const requestBody = {
           model: model,
-          messages: updatedHistory,
+          messages: [...chatHistory, newMessage], // Use the latest chat history including the new message
           temperature: temperature
         };
-      
-        // Send the request with the correctly structured 'messages' field
+    
+        // Send the request
         const response = await ChatService.createChatCompletion(requestBody);
     
         // Add the server's response to the chat history
         setChatHistory(prevChatHistory => [...prevChatHistory, { content: response.data.text, role: 'Belto' }]);
       } catch (error) {
         console.error('Error sending message:', error);
-        // Optionally handle error by showing in the chat
         setChatHistory(prevChatHistory => [...prevChatHistory, { content: 'Failed to get response.', role: 'Belto' }]);
       }
     
