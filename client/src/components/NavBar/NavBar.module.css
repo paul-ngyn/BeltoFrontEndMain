@@ -1,0 +1,36 @@
+.navigationBar {
+    position: absolute;
+    top: 1vh;
+    background-color: var(--color-gray-200);
+    width: 100%;
+    height: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: auto;
+    box-sizing: border-box;
+    cursor: default;
+    z-index: 1;
+    margin-bottom: 2px;
+  }
+
+.NavTextLogo {
+    display: flex;
+    margin-right: 4px;
+    margin-left: 4px;
+    position: relative;
+}
+
+.Navdropdown {
+  display: flex;
+  position: relative;
+}
+.navItems {
+  display: flex;
+  align-items: center;
+}
+
+.sidebarOpen {
+  transform: translateX(250px)
+}

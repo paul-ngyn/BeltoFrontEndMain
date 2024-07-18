@@ -1,0 +1,12 @@
+.Paperclipbutton {
+cursor: pointer;
+border: none;
+padding: 0.5px;
+margin-right: auto;
+background-color: transparent;
+}
+.Paperclip {
+position: fixed;
+overflow: hidden;
+display: flex;
+}

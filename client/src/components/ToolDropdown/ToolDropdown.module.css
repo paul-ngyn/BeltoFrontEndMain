@@ -1,0 +1,13 @@
+.ToolDropdown { /* dropdown position */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-gray-300);
+    width: auto;
+    height: fit-content;
+    margin-top: 55px;
+    position: absolute;
+    top: 0vh;
+    right: 45%;
+  }

@@ -1,0 +1,146 @@
+.sidebar {
+  position: absolute; /* Make the sidebar fixed position */
+  width: 15%; /* Set the width to 15% of the screen width */
+  height: 100vh; /* Make it full height */
+  transform: translateX(-100%); /* Move it off the screen */
+  transition: transform 0.3s ease-out; /* Animate the transform */
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+  
+  .sidebarOpen {
+    background-color: var(--color-gray-100); /* Set the background color to grey */
+    overflow: hidden;
+    z-index: 101;
+    height: 100%;
+    width: 12.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in; /* Animate the transform */
+    padding-top: 40px;
+  }
+  .closeButton {
+    position: absolute;
+    left: 13vw; /* Adjust as needed */
+    top: 47vh;
+    border: 0;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-top: 1px;
+    transform: 0.5s ease-in, opacity 0.5s ease-in;
+    background-color: transparent;
+  }
+
+  .Line { 
+    position: absolute;
+    bottom: 15%;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .optionContainer {
+    padding: 9px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 11px;
+    margin-right: 11px;
+    background-color: var(--color-gray-500);
+    border-radius: 10px;
+    border: 2px solid var(--color-gray-400);
+    font-size: 14px;
+    height: 42px;
+  }
+  .inputField {
+    /* Add your styles here */
+    color: var(--color-gray-500);
+    background-color: transparent;
+    font-size: 12px;
+    padding: 2px;
+    border: none;
+  }
+  .dashboardContainer {
+    display: flex;
+    padding: 9px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 11px;
+    margin-right: 11px;
+    background-color: var(--color-gray-500);
+    border-radius: 10px;
+    border: 2px solid var(--color-gray-400);
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    position: absolute;
+    bottom: 8%;
+    width: 90%;
+  }
+  .usernameContainer {
+    padding: 9px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 11px;
+    margin-right: 11px;
+    background-color: var(--color-gray-500);
+    border-radius: 10px;
+    border: 2px solid var(--color-gray-400);
+    font-size: 14px;
+    height: 42px;
+    position: absolute;
+    bottom: 2%;
+    width: 90%;
+  }
+  .lowerContent {
+    margin-top: 47vh;
+  }
+  .addButton {
+      background-color: var(--color-gray-500); /* Green */
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      justify-content: center;
+
+  }
+  .addButtonContainer {
+    padding: 9px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 11px;
+    margin-right: 11px;
+    background-color: var(--color-gray-500);
+    border-radius: 10px;
+    border: 2px solid var(--color-gray-400);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    height: 42px;
+  }
+  .firstLetter {
+    color: gold;
+    margin-left: 5px;
+  }
+  .restOfString {
+    color: white;
+  }
+
+  .desktop {
+    position: relative;
+    margin-left: auto;
+    margin-right: 5px;
+  }
+  
+  .usernameText {
+    margin-left: 5px;
+  }
+  .dashboardText {
+    margin-left: 5px;
+  }

@@ -1,0 +1,12 @@
+.monitorarrowup {
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+  margin-left: 3px;
+}
+.Monitor {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+}

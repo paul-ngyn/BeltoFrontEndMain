@@ -1,0 +1,25 @@
+.ChatInput {
+    border: 0;
+    outline: 0;
+    font-family: var(--font-sf-pro);
+    font-size: var(--font-size-base);
+    background-color: transparent;
+    position: absolute;
+    top: 1.5vh;
+    left: 88px;
+    color: var(--color-gray-500);
+    text-align: left;
+    width: calc(100% - 168px);
+    flex-grow: 1;
+    margin-right: 2px;
+    left: 11%;
+    margin-left: auto;
+}
+
+@media (max-width: 600px) {
+    .ChatInput {
+        left: 50px; /* Less space on smaller screens */
+        right: 50px;
+        width: calc(100% - 100px);
+    }
+}

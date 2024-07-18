@@ -1,0 +1,19 @@
+    .Submitbutton {
+    cursor: pointer;
+    border: none;
+    padding: 4px;
+    margin-left: auto;
+    background-color: var(--color-dimgray);
+    border-radius: 6px;
+    display: flex;
+    object-fit: contain;
+    justify-content: center;
+    }
+    .Submit { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Submitbutton:hover {
+        background-color: var(--color-gold);
+    }

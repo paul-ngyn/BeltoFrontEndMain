@@ -1,0 +1,21 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.11;
+    }
+  }
+
+.beltologo {
+    margin: 0;
+    position: absolute; /* Change from relative to absolute */
+    top: 40%; /* Position at 50% from the top */
+    left: 48%; /* Position at 50% from the left */
+    width: 9vw; /* Logo width as a percentage of the viewport width */
+    height: 10%; /* Fixed height for the logo */
+    object-fit: cover; /* Ensures the image covers the area of the box without distorting its aspect ratio */
+    transform: translate(-50%, -50%); /* Shift the element back by 50% of its own width and height */
+    opacity: 0.05;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }

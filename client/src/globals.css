@@ -1,0 +1,61 @@
+:root {
+/* fonts */
+  --font-sf-pro: "SF Pro";
+
+/* font sizes */
+  --font-size-17xl: 36px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-29xl: 48px;
+
+/* Colors */
+  --color-gray-100: #18191b;
+  --color-gray-200: #0f0f15;
+  --color-gray-300: rgba(255, 255, 255, 0.5);
+  --color-gray-400: rgba(255, 255, 255, 0.15);
+  --color-dimgray: #61594f;
+  --color-white: #fff;
+  --color-gainsboro: #d9d9d9;
+  --color-gold: #ffc201;
+
+  /* Gaps */
+  --gap-3xs: 10px;
+  --gap-5xs: 8px;
+  --gap-base: 16px;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+  --padding-xs: 12px;
+  --padding-base: 16px;
+  --padding-5xs: 8px;
+  --padding-mini: 15px;
+
+  /* Border radiuses */
+  --br-base: 16px;
+  --br-5xs: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--color-gray-200);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
