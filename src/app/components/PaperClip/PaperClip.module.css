@@ -1,12 +1,85 @@
-.Paperclipbutton {
-cursor: pointer;
-border: none;
-padding: 0.5px;
-margin-right: auto;
-background-color: transparent;
-}
-.Paperclip {
-position: fixed;
-overflow: hidden;
-display: flex;
-}
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .Paperclipbutton {
+    cursor: pointer;
+    border: none;
+    padding: 0.5px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 22px;
+    position: relative;
+  }
+  
+  .Paperclip {
+    position: static;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .popup {
+    position: absolute;
+    width: 250px; /* Adjust width as necessary */
+    background-color: darkgray;
+    border: 1px solid darkgray;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the popup is above other elements */
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  .popupContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .uploadOptions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .uploadOption {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background-color: darkgrey;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .uploadOption:hover {
+    background-color: red;
+  }
+  
+  .closeButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .closeButton:hover {
+    background-color: #d32f2f;
+  }
+  
+  .optionLabel {
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+  }
+  
