@@ -18,10 +18,10 @@
   }
   
   .Paperclip {
-    position: static;
+    position: fixed;
     overflow: hidden;
     display: block;
-    width: 100%;
+    width: 1.2%;
     height: auto;
   }
   

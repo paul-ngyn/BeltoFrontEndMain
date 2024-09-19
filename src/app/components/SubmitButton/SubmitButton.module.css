@@ -1,4 +1,8 @@
-    .Submitbutton {
+.chatbox-container {
+    position: relative; /* Ensure the container is positioned */
+}
+
+.Submitbutton {
     cursor: pointer;
     border: none;
     padding: 4px;
@@ -8,12 +12,17 @@
     display: flex;
     object-fit: contain;
     justify-content: center;
-    }
-    .Submit { 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .Submitbutton:hover {
-        background-color: var(--color-gold);
-    }
+    position: fixed; /* Position fixed */
+    z-index: 1000; /* Ensure it is above other elements */
+    right: 59.2vh;
+}
+
+.Submit { 
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.Submitbutton:hover {
+    background-color: var(--color-gold);
+}

@@ -1,12 +1,18 @@
+.Monitor {
+  position: relative; /* Ensure the container is positioned */
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  justify-content: flex-end; /* Align items to the right */
+}
+
 .monitorarrowup {
   cursor: pointer;
   border: none;
   padding: 5px;
   background-color: transparent;
-  margin-left: 3px;
-}
-.Monitor {
-  position: absolute;
-  overflow: hidden;
-  display: flex;
+  position: fixed; /* Position fixed */
+  z-index: 1000; /* Ensure it is above other elements */
+  left: 55vh; /* Add some space to the right */
+  margin-top: 2px;
 }

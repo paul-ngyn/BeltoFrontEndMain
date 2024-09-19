@@ -1,8 +1,8 @@
 .Chatbox {
     position: absolute;
-    left: 28.2%;
+    left: 26%;
     top: 40%;
-    width: 44%;
+    width: 46%;
     height: 5.55vh  ;
     border-radius: 16px;
     background-color: var(--color-gray-200);
@@ -13,10 +13,12 @@
     align-items: center;
     padding: 10px;
     z-index: 10;
-    margin-top: 55px;
+    margin-top: 90px;
+    justify-content: center;
   } 
 
   .ChatboxBottom {
+    display: flex;
     position: fixed;
     top: 84%;
   }

@@ -26,6 +26,17 @@ const Home: React.FC = () => {
     setMessageSent(true); // Update messageSent when a message is sent
   };
 
+  const onReact = (index: number, reaction: string) => {
+    console.log(`Reacted to message ${index} with ${reaction}`);
+    // Add any custom logic here, such as updating the chat history
+  };
+
+  // Define the onStop function
+  const onStop = () => {
+    console.log('Message generation stopped');
+    // Add any custom logic here to stop message generation
+  };
+
   return (
     <>
       <Head>
@@ -40,7 +51,10 @@ const Home: React.FC = () => {
         <div className={isOpen ? 'contentOpen' : 'content'}>
           {messageSent && <ResponseLogo/>}
           {!messageSent && <ToolDropdown/>} {/* Conditionally render ToolDropdown */}
-          <ResponseSection chatHistory={chatHistory}/>
+          <ResponseSection chatHistory={chatHistory}
+           onReact={onReact}  
+           onStop={onStop}    
+          />
           <Chatbox chatHistory={chatHistory} setChatHistory={setChatHistory} onMessageSend={() => setMessageSent(true)} messageSent = {messageSent}/>
         </div>
       </div>

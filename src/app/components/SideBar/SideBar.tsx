@@ -3,7 +3,7 @@ import styles from './SideBar.module.css';
 import Image from 'next/image';
 
 const Sidebar: React.FC<{ isOpen: boolean; toggle: () => void }> = ({ isOpen, toggle }) => {
-  const [options, setOptions] = useState(['Environmental DB', 'Social DB', 'Governmental DB', 'Bills DB']);
+  const [options, setOptions] = useState(['Environmental DB']);
   const [editingOption, setEditingOption] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState<string>('');
 
