@@ -9,17 +9,16 @@
     width: calc(100% - 80px); /* Keep the width limited to container size */
     resize: none; /* Disable manual resizing */
     overflow: hidden; /* Hide scrollbars initially */
-    padding: 22px 22px;
+    padding: 12px 10px;
     border-radius: 10px;
     line-height: 1.5;
-    min-height: 40px; /* Minimum height for input */
+    min-height: 10px; /* Minimum height for input */
     max-height: 200px; /* Maximum height before scroll */
     transition: height 0.2s ease-in-out; /* Smooth transition for height change */
     white-space: pre-wrap; /* Ensure text wraps correctly */
     word-wrap: break-word; /* Ensure long words are wrapped */
     overflow-y: auto; /* Add vertical scroll only when necessary */
     display: block; /* Ensure it is treated as a block-level element */
-    margin-top: 35px;
 }
 
 /* Adjustments for smaller screens */

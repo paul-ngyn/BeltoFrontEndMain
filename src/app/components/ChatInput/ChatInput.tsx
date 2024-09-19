@@ -1,11 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './ChatInput.module.css';
 
-type Chat = {
-  sender: string;
-  text: string;
-};
-
 interface ChatInputProps {
   message: string;
   setMessage: (message: string) => void;
@@ -27,6 +22,9 @@ const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, handleSendMe
 
       chatInput.addEventListener('input', handleInput);
 
+      // Initial height adjustment
+      handleInput();
+
       // Cleanup event listener when the component unmounts
       return () => {
         chatInput.removeEventListener('input', handleInput);
@@ -39,11 +37,10 @@ const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, handleSendMe
     setMessage(event.target.value);
   };
 
-  // Handle send on Enter key press
-  const handleKeyPress = (event: React.KeyboardEvent) => {
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === 'Enter' && !event.shiftKey) {
-      event.preventDefault(); // Prevent new line on Enter
-      handleSendMessage(); // Send message
+      event.preventDefault();
+      handleSendMessage();
     }
   };
 
@@ -54,7 +51,8 @@ const ChatInput: React.FC<ChatInputProps> = ({ message, setMessage, handleSendMe
       placeholder="Type your prompt here..."
       value={message}
       onChange={handleInputChange}
-      onKeyPress={handleKeyPress} // Add keypress handling for "Enter"
+      onKeyPress={handleKeyPress}
+      rows={1} // Start with a single row
     />
   );
 };
