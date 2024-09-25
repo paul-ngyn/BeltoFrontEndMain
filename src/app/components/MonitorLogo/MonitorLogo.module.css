@@ -1,7 +1,7 @@
 .Monitor {
   position: relative; /* Ensure the container is positioned */
   overflow: hidden;
-  display: flex;
+  display: flex; /* Use flex to align items */
   align-items: center; /* Align items vertically centered */
   justify-content: flex-end; /* Align items to the right */
 }
@@ -15,4 +15,63 @@
   z-index: 1000; /* Ensure it is above other elements */
   left: 55vh; /* Add some space to the right */
   margin-top: 2px;
+}
+
+.popup {
+  position: absolute;
+  top: 50%; /* Position below the button */
+  left: 20%;
+  transform: translateX(-50%);
+  width: 250px; /* Adjust width as necessary */
+  background-color: darkgray;
+  border: 1px solid darkgray;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the popup is above other elements */
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.popupContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.link {
+  display: block;
+  padding: 8px 12px;
+  background-color: darkgrey;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  background-color: red;
+}
+
+.closeButton {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: darkslategray;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: #d32f2f;
 }

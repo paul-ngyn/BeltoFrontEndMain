@@ -1,6 +1,6 @@
 .Chatbox {
     position: absolute;
-    left: 26%;
+    left: 26.1%;
     top: 40%;
     width: 46%;
     height: fit-content;
@@ -12,7 +12,7 @@
     overflow-y: auto;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 3px;
     z-index: 10;
     margin-top: 30px;
     justify-content: center;
