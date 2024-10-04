@@ -13,12 +13,18 @@
     border-radius: 10px;
     line-height: 1.5;
     min-height: 10px; /* Minimum height for input */
-    max-height: 200px; /* Maximum height before scroll */
+    max-height: 100px; /* Maximum height before scroll */
     transition: height 0.2s ease-in-out; /* Smooth transition for height change */
     white-space: pre-wrap; /* Ensure text wraps correctly */
     word-wrap: break-word; /* Ensure long words are wrapped */
     overflow-y: auto; /* Add vertical scroll only when necessary */
     display: block; /* Ensure it is treated as a block-level element */
+}
+
+/* Styles for bottom-aligned chatbox */
+.ChatboxBottom .ChatInput {
+    min-height: 20px; /* New minimum height for bottom-aligned chatbox */
+    max-height: 100px; /* New maximum height for bottom-aligned chatbox */
 }
 
 /* Adjustments for smaller screens */

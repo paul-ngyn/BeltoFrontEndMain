@@ -14,7 +14,7 @@
     justify-content: center;
     position: fixed; /* Position fixed */
     z-index: 1000; /* Ensure it is above other elements */
-    right: 59vh;
+    right: 58.1vh;
 }
 
 .Submit { 

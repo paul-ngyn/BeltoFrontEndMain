@@ -1,6 +1,6 @@
 .Chatbox {
     position: absolute;
-    left: 26.1%;
+    left: 26.4%;
     top: 40%;
     width: 46%;
     height: fit-content;
@@ -21,5 +21,7 @@
   .ChatboxBottom {
     display: flex;
     position: fixed;
-    top: 72%;
+    top: 85%;
   }
+
+ 

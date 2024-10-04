@@ -50,7 +50,7 @@ let chatHistory = [
 async function fetchCompletion(prompt, n_predict, stream) {
     // Send a POST request to the external API with the user's prompt 
 
-    const response = await fetch("http://38.44.198.59:8080/v1/chat/completions", {
+    const response = await fetch("http://71.84.222.196:8080/v1/chat/completions", {
         method: 'POST',
         body: JSON.stringify({
             model: "gpt-3.5-turbo", // Model for generating the completion
