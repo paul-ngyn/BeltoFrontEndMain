@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './ResponseSection.module.css';
-import ReactionComponent from '../Reaction/ReactionComponent';
 
 type Chat = {
   sender: string;
@@ -12,8 +11,6 @@ type ResponseSectionProps = {
   onReact: (index: number, reaction: string) => void; // New prop for reacting to a message
   onStop: () => void; // New prop for stopping the message generation
 };
-
-
 
 const ResponseSection: React.FC<ResponseSectionProps> = ({ chatHistory, onReact, onStop }) => {
   const containerRef = useRef<HTMLDivElement>(null);
