@@ -84,6 +84,13 @@ const Home: React.FC = () => {
     setSelectedChatHistory(newHistory);
   };
 
+  const handleUpdateChatHistory = (id: string, newName: string) => {
+    const updatedChatHistories = chatHistories.map(chatHistory => 
+      chatHistory.id === id ? { ...chatHistory, id: newName } : chatHistory
+    );
+    setChatHistories(updatedChatHistories);
+  };
+
   return (
     <>
       <Head>
@@ -101,6 +108,7 @@ const Home: React.FC = () => {
           selectedChatHistoryId={selectedChatHistory ? selectedChatHistory.id : null}
           onSelectChatHistory={handleSelectChatHistory}
           onCreateNewChatHistory={handleCreateNewChatHistory}
+          onUpdateChatHistory={handleUpdateChatHistory} // Pass the update function
         />
         <div className={isOpen ? 'contentOpen' : 'content'}>
           {messageSent && <ResponseLogo/>}

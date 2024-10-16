@@ -9,23 +9,39 @@ interface SidebarProps {
   selectedChatHistoryId: string | null;
   onSelectChatHistory: (id: string) => void;
   onCreateNewChatHistory: () => void;
+  onUpdateChatHistory: (id: string, newName: string) => void; // Add this line
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle, chatHistories, selectedChatHistoryId, onSelectChatHistory, onCreateNewChatHistory }) => {
-  const [options, setOptions] = useState(['Environmental DB']);
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle, chatHistories, selectedChatHistoryId, onSelectChatHistory, onCreateNewChatHistory, onUpdateChatHistory }) => {
   const [editingOption, setEditingOption] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState<string>('');
 
-  const addOption = () => {
-    const newOption = `Click to Edit DB name`;
-    setOptions(prevOptions => [...prevOptions, newOption]);
-    setEditingOption(newOption);
-    setInputValue(newOption);
+  const startEditing = (id: string, currentName: string) => {
+    setEditingOption(id);
+    setInputValue(currentName);
   };
 
-  const renameOption = (oldOption: string, newOption: string) => {
-    setOptions(options.map(option => option === oldOption ? newOption : option));
+  const renameOption = (id: string, newName: string) => {
+    onUpdateChatHistory(id, newName); // Call the update function passed from the parent
     setEditingOption(null);
+    setInputValue('');
+    onSelectChatHistory(newName); // Update the selected chat history
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleInputBlur = () => {
+    if (editingOption) {
+      renameOption(editingOption, inputValue);
+    }
+  };
+
+  const handleInputKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && editingOption) {
+      renameOption(editingOption, inputValue);
+    }
   };
 
   return (
@@ -40,14 +56,27 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle, chatHistories, select
           {chatHistories.map((chatHistory, index) => (
             <li key={chatHistory.id}>
               <div className={styles.optionContainer}>
-                <a
-                  href={`#${chatHistory.id}`}
-                  onClick={() => onSelectChatHistory(chatHistory.id)}
-                  className={selectedChatHistoryId === chatHistory.id ? styles.selected : ''}
-                >
-                  <span className={styles.firstLetter}>{chatHistory.id[0]}</span>
-                  <span className={styles.restOfString}>{chatHistory.id.slice(1)}</span>
-                </a>
+                {editingOption === chatHistory.id ? (
+                  <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleInputChange}
+                    onBlur={handleInputBlur}
+                    onKeyPress={handleInputKeyPress}
+                    className={styles.inputField}
+                    autoFocus
+                  />
+                ) : (
+                  <a
+                    href={`#${chatHistory.id}`}
+                    onClick={() => onSelectChatHistory(chatHistory.id)}
+                    className={selectedChatHistoryId === chatHistory.id ? styles.selected : ''}
+                    onDoubleClick={() => startEditing(chatHistory.id, chatHistory.id)}
+                  >
+                    <span className={styles.firstLetter}>{chatHistory.id[0]}</span>
+                    <span className={styles.restOfString}>{chatHistory.id.slice(1)}</span>
+                  </a>
+                )}
               </div>
             </li>
           ))}
